@@ -307,7 +307,6 @@ create() {
 
             if (gameState.player.poison > 0) {
                 gameState.player.poison = Math.max(0, gameState.player.poison - card.poisonRemove) 
-                gameState.actionText = self.add.text(550, 300, card.text, { fontSize: '32px', fill: '#ff0000' }).setOrigin(0.5);
             }    
 
             updateManaText(); 
