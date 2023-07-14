@@ -50,7 +50,7 @@ create() {
     gameState.music = this.sound.add('bossTune');
 
     // Set up characters
-    gameState.player.sprite = this.add.sprite(320, 340, 'player').setScale(0.41).setFlipX(true).setInteractive();
+    gameState.player.sprite = this.add.sprite(320, 340, 'player').setScale(0.43).setFlipX(true).setInteractive();
     gameState.player.mana = gameState.player.manaMax;
     gameState.player.health = gameState.player.healthMax;
     gameState.player.strength = gameState.player.strengthPerma;
