@@ -387,11 +387,11 @@ function updateManaText() {
 function updateEnemyActions() {
     enemyActions = [ 
         {key: 'damage5', damage: 0, magic: 17, poison: 0, heal: 0, poisonRemove: 0, strength: 0, armor: 0, text: 'Deals 17 magic damage', probability: 0.175 + ((gameState.enemy1.health === gameState.enemy1.healthMax) ? 0.20 : 0) / 6},
-        {key: 'damage10', damage: 22, magic: 0, poison: 0, heal: 0, poisonRemove: 0, strength: 0, armor: 0, text: 'Deals 22 damage', probability: 0.2 + ((gameState.enemy1.health === gameState.enemy1.healthMax) ? 0.20 : 0) / 6},
-        {key: 'damage15', damage: 27, magic: 0, poison: 0, heal: 0, poisonRemove: 0, strength: 0, armor: 0, text: 'Deals 27 damage', probability: 0.15 + ((gameState.enemy1.health === gameState.enemy1.healthMax) ? 0.20 : 0) / 6},
+        {key: 'damage10', damage: 20, magic: 0, poison: 0, heal: 0, poisonRemove: 0, strength: 0, armor: 0, text: 'Deals 20 damage', probability: 0.2 + ((gameState.enemy1.health === gameState.enemy1.healthMax) ? 0.20 : 0) / 6},
+        {key: 'damage15', damage: 25, magic: 0, poison: 0, heal: 0, poisonRemove: 0, strength: 0, armor: 0, text: 'Deals 25 damage', probability: 0.15 + ((gameState.enemy1.health === gameState.enemy1.healthMax) ? 0.20 : 0) / 6},
         {key: 'heal10', damage: 0, magic: 0, poison: 0, heal: 17, poisonRemove: 0, strength: 0, armor: 2, text: 'Heals 17 HP\nGains 2 armor', probability: (gameState.enemy1.health === gameState.enemy1.healthMax) ? 0 : 0.15},
         {key: 'heal20', damage: 0, magic: 0, poison: 0, heal: 27, poisonRemove: 0, strength: 0, armor: 0, text: 'Heals 27 HP', probability: (gameState.enemy1.health === gameState.enemy1.healthMax) ? 0 : 0.05},
-        {key: 'strength1', damage: 0, magic: 0, poison: 0, heal: 0, poisonRemove: 0, strength: 5, armor: 0, text: 'Gains 5 strenght', probability: 0.125 + ((gameState.enemy1.health === gameState.enemy1.healthMax) ? 0.20 : 0) / 6},
+        {key: 'strength1', damage: 0, magic: 0, poison: 0, heal: 0, poisonRemove: 0, strength: 4, armor: 0, text: 'Gains 5 strenght', probability: 0.125 + ((gameState.enemy1.health === gameState.enemy1.healthMax) ? 0.20 : 0) / 6},
         {key: 'armor1', damage: 0, magic: 0, poison: 0, heal: 0, poisonRemove: 0, strength: 0, armor: 4, text: 'Gains 4 armor', probability: 0.1 + ((gameState.enemy1.health === gameState.enemy1.healthMax) ? 0.20 : 0) / 6},
         {key: 'poison1', damage: 0, magic: 0, poison: 7, heal: 0, poisonRemove: 0, strength: 0, armor: 1, text: 'Deals 7 poison', probability: 0.05 + ((gameState.enemy1.health === gameState.enemy1.healthMax) ? 0.20 : 0) / 6}
     ];
