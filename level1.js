@@ -43,7 +43,7 @@ preload() {
 
 create() {
     let self = this;
-    this.cameras.main.fadeIn(800, 0, 0, 0);
+    this.cameras.main.fadeIn(500, 0, 0, 0);
 
     this.add.image(0,0, 'bakgrunn1').setScale(0.75).setOrigin(0.02,0); 
     gameState.cursors = this.input.keyboard.createCursorKeys();
@@ -88,7 +88,7 @@ create() {
 
     gameState.enemy1 = {
         sprite: this.add.sprite(760, 340, 'enemy1').setScale(0.24).setFlipX(false).setInteractive(),        
-        health: 1,
+        health: 170,
         healthMax: 170,
         strength: 0, 
         armor: 0,
