@@ -106,7 +106,7 @@ create() {
     gameState.player.healthBar = this.add.graphics();
     gameState.player.healthBar.fillStyle(0x00ff00, 1);
     gameState.player.healthBar.fillRect(gameState.player.sprite.x - 40, gameState.player.sprite.y - 140, 100 * (gameState.player.health / gameState.player.healthMax), 10);
-    gameState.player.healthBarText = this.add.text(gameState.player.sprite.x - 40, gameState.player.sprite.y - 140, `${gameState.player.health}/${gameState.player.healthMax}`, { fontSize: '11px', fill: '#000000' }).setOrigin(0);
+    gameState.player.healthBarText = this.add.text(gameState.player.sprite.x - 21, gameState.player.sprite.y - 135, `${gameState.player.health}/${gameState.player.healthMax}`, { fontSize: '11px', fill: '#000000' }).setOrigin(0.5);
 
     // Add a health bar to the enemy
     gameState.enemy1.healthBarBackground = this.add.graphics();
@@ -116,7 +116,7 @@ create() {
     gameState.enemy1.healthBar = this.add.graphics();
     gameState.enemy1.healthBar.fillStyle(0xff0000, 1);
     gameState.enemy1.healthBar.fillRect(gameState.enemy1.sprite.x - 40, gameState.enemy1.sprite.y - 140, 100 * (gameState.enemy1.health / gameState.enemy1.healthMax), 10);
-    gameState.enemy1.healthBarText = this.add.text(gameState.enemy1.sprite.x - 40, gameState.enemy1.sprite.y - 140, `${gameState.enemy1.health}/${gameState.enemy1.healthMax}`, { fontSize: '11px', fill: '#000000' }).setOrigin(0);
+    gameState.enemy1.healthBarText = this.add.text(gameState.enemy1.sprite.x - 13, gameState.enemy1.sprite.y - 135, `${gameState.enemy1.health}/${gameState.enemy1.healthMax}`, { fontSize: '11px', fill: '#000000' }).setOrigin(0.5);
 
     gameState.deck = [
         {key: 'knucklefist', type: 'attack', cost: 1, damage: 7, magic: 0, poison: 0, heal: 0, poisonRemove: 0, strength: 0, armor: 0, reduceTargetArmor: 0, text: 'Deals 7 damage'},
