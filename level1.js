@@ -134,7 +134,7 @@ create() {
 
     gameState.bonusCards = [
         {key: 'energyEncore', type: 'powerup', cost: -1, damage: 0, magic: 0, poison: 0, heal: 0, poisonRemove: 0, strength: 0, armor: 0, reduceTargetArmor: 0, text: 'Gains 1 mana this turn'},
-        {key: 'anthrax', type: 'attack', cost: 2, damage: 0, magic: 0, poison: 4, heal: 0, poisonRemove: 0, strength: 0, armor: 0, reduceTargetArmor: 0, text: 'Deals 6 poison'},
+        {key: 'anthrax', type: 'attack', cost: 2, damage: 0, magic: 0, poison: 4, heal: 0, poisonRemove: 0, strength: 0, armor: 0, reduceTargetArmor: 0, text: 'Deals 4 poison'},
         {key: 'axeOfAnarchy', type: 'attack', cost: 2, damage: 12, magic: 0, poison: 0, heal: 0, poisonRemove: 0, strength: 0, armor: 0, reduceTargetArmor: 1, text: 'Deals 12 damage\nDestroys 1 armor'},
         {key: 'despo', type: 'buff', cost: 1, damage: 0, magic: 0, poison: 0, heal: -7, poisonRemove: 0, strength: 2, armor: 0, reduceTargetArmor: 0, text: 'Gains 2 strength'},
         {key: 'virulentVirtue', type: 'heal', cost: 1, damage: 0, magic: 0, poison: 0, heal: 0, dynamicHeal: () => 2 * gameState.enemy1.poison, poisonRemove: 0, strength: 0, armor: 0, reduceTargetArmor: 0, text: `Gains 0 HP`, dynamicText: () => `Gains ${2 * gameState.enemy1.poison} HP`},
