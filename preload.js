@@ -56,14 +56,14 @@ class PreloadScene extends Phaser.Scene {
         gameState.bgLoadingScreen.on('pointerup', () => {
             gameState.thunder.play( {volume: 0.9, seek: 0.2 } )    
             // Flash the screen; start a fade out; switch to the new scene
-            this.cameras.main.shake(1500, .0015, false);
+            this.cameras.main.shake(1300, .0015, false);
             this.cameras.main.flash(500);
 
             this.time.delayedCall(500, () => {
-                this.cameras.main.fadeOut(1000);
+                this.cameras.main.fadeOut(800);
             }, [], this);
 
-            this.time.delayedCall(1500, () => {
+            this.time.delayedCall(1300, () => {
                 this.scene.start('Level1');
             }, [], this);
         })
