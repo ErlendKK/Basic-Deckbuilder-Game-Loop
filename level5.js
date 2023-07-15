@@ -19,6 +19,21 @@ create() {
     let self = this;
     this.cameras.main.fadeIn(800, 0, 0, 0);
 
+    function resize() {
+            var canvas = game.canvas, width = window.innerWidth, height = window.innerHeight;
+            var wratio = width / height, ratio = canvas.width / canvas.height;
+            if (wratio < ratio) {
+                canvas.style.width = width + "px";
+                canvas.style.height = (width / ratio) + "px";
+            } else {
+                canvas.style.width = (height * ratio) + "px";
+                canvas.style.height = height + "px";
+            }
+        }
+    
+    window.addEventListener('resize', resize);
+    resize();
+
     shuffleDeck(gameState.bonusCards);
 
     this.add.image(0,0, 'bakgrunn5').setScale(0.75).setOrigin(0.02,0); 
