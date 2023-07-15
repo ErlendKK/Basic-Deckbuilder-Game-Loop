@@ -59,8 +59,8 @@ create() {
 
     gameState.enemy1 = {
         sprite: this.add.sprite(760, 340, 'enemy3').setScale(0.26).setFlipX(false).setInteractive(),        
-        health: 180,
-        healthMax: 180,
+        health: 175,
+        healthMax: 175,
         strength: 0, 
         armor: 0,
         poison: 0
