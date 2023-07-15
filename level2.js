@@ -392,7 +392,7 @@ function updateEnemyActions() {
         {key: 'heal10', damage: 0, magic: 0, poison: 0, heal: 15, poisonRemove: 0, strength: 0, armor: 2, text: 'Heals 15 HP\nGains 2 armor', probability: (gameState.enemy1.health === gameState.enemy1.healthMax) ? 0 : 0.15},
         {key: 'heal20', damage: 0, magic: 0, poison: 0, heal: 25, poisonRemove: 0, strength: 0, armor: 0, text: 'Heals 25 HP', probability: (gameState.enemy1.health === gameState.enemy1.healthMax) ? 0 : 0.05},
         {key: 'strength1', damage: 0, magic: 0, poison: 0, heal: 0, poisonRemove: 0, strength: 4, armor: 0, text: 'Gains 4 strenght', probability: 0.125 + ((gameState.enemy1.health === gameState.enemy1.healthMax) ? 0.20 : 0) / 6},
-        {key: 'armor1', damage: 0, magic: 0, poison: 0, heal: 0, poisonRemove: 0, strength: 0, armor: 4, text: 'Gains 4 armor', probability: 0.1 + ((gameState.enemy1.health === gameState.enemy1.healthMax) ? 0.20 : 0) / 6},
+        {key: 'armor1', damage: 0, magic: 0, poison: 0, heal: 0, poisonRemove: 0, strength: 0, armor: 3, text: 'Gains 3 armor', probability: 0.1 + ((gameState.enemy1.health === gameState.enemy1.healthMax) ? 0.20 : 0) / 6},
         {key: 'poison1', damage: 0, magic: 0, poison: 7, heal: 0, poisonRemove: 0, strength: 0, armor: 4, text: 'Deals 7 poison', probability: 0.05 + ((gameState.enemy1.health === gameState.enemy1.healthMax) ? 0.20 : 0) / 6}
     ];
 }
