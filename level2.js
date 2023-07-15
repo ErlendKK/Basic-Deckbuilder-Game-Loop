@@ -59,8 +59,8 @@ create() {
 
     gameState.enemy1 = {
         sprite: this.add.sprite(760, 340, 'enemy2').setScale(0.35).setFlipX(false).setInteractive(),        
-        health: 160,
-        healthMax: 160,
+        health: 155,
+        healthMax: 155,
         strength: 0, 
         armor: 0,
         poison: 0
@@ -333,7 +333,7 @@ function startEnemyTurn() {
             gameState.attackSound.play({ volume: 0.8 })                
             gameState.enemy1.damage = Math.floor( Math.max(1, chosenAction.magic + chosenAction.damage * (1 + 0.1 * gameState.enemy1.strength) * (1 - gameState.player.armor / 20)) )
             gameState.player.health -= gameState.enemy1.damage;
-            gameState.actionText = self.add.text(550, 300, `Deals ${gameState.enemy1.damage} damage`, { fontSize: '32px', fill: '#ff0000' }).setOrigin(0.5);
+            gameState.actionText = self.add.text(550, 300, `Deals ${gameState.enemy1.damage} damage\nDeals 1 poison`, { fontSize: '32px', fill: '#ff0000' }).setOrigin(0.5);
             
             self.tweens.add({
                 targets: gameState.enemy1.sprite,
