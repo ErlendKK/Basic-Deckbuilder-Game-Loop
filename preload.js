@@ -48,6 +48,22 @@ class PreloadScene extends Phaser.Scene {
     }; //end of preload
 
     create() {
+
+        function resize() {
+            var canvas = game.canvas, width = window.innerWidth, height = window.innerHeight;
+            var wratio = width / height, ratio = canvas.width / canvas.height;
+            if (wratio < ratio) {
+                canvas.style.width = width + "px";
+                canvas.style.height = (width / ratio) + "px";
+            } else {
+                canvas.style.width = (height * ratio) + "px";
+                canvas.style.height = height + "px";
+            }
+        }
+    
+    window.addEventListener('resize', resize);
+    resize();
+        
         gameState.bgLoadingScreen = this.add.image(550,480, 'bgLoadingScreen').setScale(1.37).setInteractive();
         gameState.startLevel1Text = this.add.text(550, 170, 'Punk Rock Samurai', { fontSize: '100px', fill: '#000000', fontFamily: 'Rock Kapak' }).setOrigin(0.5);
         gameState.startLevel1Text = this.add.text(550, 500, 'Click to start', { fontSize: '45px', fill: '#ff0000', fontWeight: 'bold' }).setOrigin(0.5);
