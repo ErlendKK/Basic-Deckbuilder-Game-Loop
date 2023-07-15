@@ -528,7 +528,10 @@ if (gameState.player.health <= 0) {
                         scaleX: 0.6,
                         scaleY: 0.6,
                         duration: 1000,
-                        ease: 'Power2'
+                        ease: 'Power2',
+                        onStart: () => { 
+                            bonusCard.sprite.removeInteractive(); 
+                        }
                     });
                     
                     self.add.text(550, 180, 'Gained 1 card', { fontSize: '40px', fill: '#000000' }).setOrigin(0.5);
