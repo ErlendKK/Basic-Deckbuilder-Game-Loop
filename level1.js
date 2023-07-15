@@ -445,7 +445,7 @@ create() {
             {key: 'heal10', damage: 0, magic: 0, poison: 0, heal: 15, poisonRemove: 0, strength: 0, armor: 1, text: 'Heals 15 HP\nGains 1 armor', probability: (gameState.enemy1.health === gameState.enemy1.healthMax) ? 0 : 0.15},
             {key: 'heal20', damage: 0, magic: 0, poison: 0, heal: 25, poisonRemove: 0, strength: 0, armor: 0, text: 'Heals 25 HP', probability: (gameState.enemy1.health === gameState.enemy1.healthMax) ? 0 : 0.05},
             {key: 'strength1', damage: 0, magic: 0, poison: 2, heal: 0, poisonRemove: 0, strength: 3, armor: 0, text: 'Gains 3 strenght\nDeals 2 poison', probability: 0.125 + ((gameState.enemy1.health === gameState.enemy1.healthMax) ? 0.20 : 0) / 6},
-            {key: 'armor1', damage: 0, magic: 0, poison: 0, heal: 0, poisonRemove: 0, strength: 0, armor: 4, text: 'Gains 4 armor', probability: 0.1 + ((gameState.enemy1.health === gameState.enemy1.healthMax) ? 0.20 : 0) / 6},
+            {key: 'armor1', damage: 0, magic: 0, poison: 0, heal: 0, poisonRemove: 0, strength: 0, armor: 3, text: 'Gains 3 armor', probability: 0.1 + ((gameState.enemy1.health === gameState.enemy1.healthMax) ? 0.20 : 0) / 6},
             {key: 'poison1', damage: 0, magic: 0, poison: 5, heal: 0, poisonRemove: 0, strength: 0, armor: 0, text: 'Deals 5 poison', probability: 0.05 + ((gameState.enemy1.health === gameState.enemy1.healthMax) ? 0.20 : 0) / 6}
         ];
     }
