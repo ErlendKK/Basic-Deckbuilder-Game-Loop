@@ -19,7 +19,21 @@ create() {
     this.cameras.main.fadeIn(800, 0, 0, 0);
     gameState.cursors = this.input.keyboard.createCursorKeys();
     gameState.thunder = this.sound.add('thundersound');
-
+    
+    function resize() {
+            var canvas = game.canvas, width = window.innerWidth, height = window.innerHeight;
+            var wratio = width / height, ratio = canvas.width / canvas.height;
+            if (wratio < ratio) {
+                canvas.style.width = width + "px";
+                canvas.style.height = (width / ratio) + "px";
+            } else {
+                canvas.style.width = (height * ratio) + "px";
+                canvas.style.height = height + "px";
+            }
+        }
+    
+    window.addEventListener('resize', resize);
+    resize();
 
     this.add.image(550,320, 'endscene').setScale(0.95).setOrigin(0.5,0.5);    
     gameState.endGameText = this.add.text(550, 300, ' Thanks for playing\nPunk Rock Samurai\n   Alpha v1.0', { fontSize: '60px', fill: '#FFFFFF' }).setOrigin(0.5,0.5);
