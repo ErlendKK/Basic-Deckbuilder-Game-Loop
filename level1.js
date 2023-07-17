@@ -70,6 +70,14 @@ create() {
     gameState.currentCards = [];
     gameState.cardImages = [];
     gameState.startText = this.add.text(550, 300, 'Level 1!', { fontSize: '60px', fill: '#ff0000', fontFamily: 'Rock Kapak'  }).setOrigin(0.5);
+
+    gameState.cardsDealtSound = this.sound.add('cardsDealtSound');
+    gameState.victorySound = this.sound.add('victorySound')
+    gameState.buttonPressedSound = this.sound.add('buttonPressedSound');
+    gameState.attackSound = this.sound.add('attackSound');
+    gameState.powerUpSound = this.sound.add('powerUpSound');
+    gameState.healSound = this.sound.add('healSound');
+    gameState.music = this.sound.add('bossTune');
     
     this.time.delayedCall(500, () => {    
         gameState.music.play( { loop: true, volume: 0.35 } );
@@ -79,14 +87,6 @@ create() {
         gameState.startText.destroy();
         this.time.delayedCall(600, startPlayerTurn());
     });
-
-    gameState.cardsDealtSound = this.sound.add('cardsDealtSound');
-    gameState.victorySound = this.sound.add('victorySound')
-    gameState.buttonPressedSound = this.sound.add('buttonPressedSound');
-    gameState.attackSound = this.sound.add('attackSound');
-    gameState.powerUpSound = this.sound.add('powerUpSound');
-    gameState.healSound = this.sound.add('healSound');
-    gameState.music = this.sound.add('bossTune');
 
     // Set up characters
     gameState.player = {
