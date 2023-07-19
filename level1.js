@@ -5,7 +5,7 @@ class Level1 extends Phaser.Scene {
 
     create() {   
         let self = this;
-        this.cameras.main.fadeIn(1500, 0, 0, 0);
+        this.cameras.main.fadeIn(1000, 0, 0, 0);
         this.add.image(0,0, 'bakgrunn1').setScale(0.75).setOrigin(0.02,0);              
         gameState.cursors = this.input.keyboard.createCursorKeys();
         
@@ -42,7 +42,7 @@ class Level1 extends Phaser.Scene {
     
         gameState.enemy1 = {
             sprite: this.add.sprite(760, 340, 'enemy1').setScale(0.24).setFlipX(false).setInteractive(),        
-            health: 10,
+            health: 150,
             healthMax: 150,
             strength: 0, 
             armor: 0,
