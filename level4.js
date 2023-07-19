@@ -37,7 +37,7 @@ class Level4 extends Phaser.Scene {
     
         gameState.enemy1 = {
             sprite: this.add.sprite(760, 340, 'enemy4').setScale(0.25).setFlipX(true).setInteractive(),        
-            health: 10,
+            health: 170,
             healthMax: 170,
             strength: 0, 
             armor: 0,
