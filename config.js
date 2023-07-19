@@ -1,5 +1,3 @@
-gameState = {};
-
 const config = {
     type: Phaser.AUTO,
     width: 1100,
@@ -12,12 +10,16 @@ const config = {
         Level4, 
         Level5,
         Endscene
-         
-    ]
+    ],
+    scale: {
+        mode: Phaser.Scale.FIT,
+        autoCenter: Phaser.Scale.CENTER_BOTH
+    },
 };
 
 
 const game = new Phaser.Game(config);
+
 
 /* ---------------------- CREDITS -----------------
 
@@ -28,4 +30,7 @@ Power up sound by MATRIXXX (https://freesound.org/people/MATRIXXX_/)
 Button Sprites by Ian Eborn.
 Thunder sound by Josh74000MC (https://freesound.org/people/Josh74000MC/)
 Victory music by  (https://pixabay.com/users/pixabay-1/)
+
+https://raw.githack.com/ErlendKK/Punk-Rock-Samurai/main/index.html
 */
+
